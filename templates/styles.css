@@ -1,0 +1,118 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%; /* Ensure the body takes the full height */
+    margin: 0; /* Remove default margin */
+}
+/* Body and Background */
+body {
+    
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif; /* Set a default font */
+    color: #333; /* Dark text color */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-bottom: 1px solid #ccc; /* Light grey border */
+}
+
+/* Custom styles for navbar toggler */
+.navbar-toggler {
+    background-color: #2F4F4F; /* Dark Slate Gray for the button background */
+    border: 2px solid #FFD700; /* Gold border for a cleaner look */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+/* Style for the toggler icon */
+.navbar-toggler-icon {
+    background-color: #FFD700; /* Change the background color of the default icon to gold */
+}
+
+/* Hover effect for the navbar toggler */
+.navbar-toggler:hover {
+    background-color: #3D5B5B; /* Lighter shade on hover */
+}
+
+/* Focus outline for accessibility */
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: 0 0 3px 3px rgba(255, 215, 0, 0.5); /* Soft gold shadow */
+}
+
+
+
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: white; /* White text for contrast */
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color:cyan;
+}
+
+.header p {
+    font-size: 1.2rem;
+}
+
+/* Main Content */
+.container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* About Section */
+.about {
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #e8f0fe; /* Light blue background */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Floating Element */
+.float-right {
+    float: right; /* Float element to the right */
+    margin-left: 20px; /* Space between text and floating element */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    position:relative ;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem; /* Smaller header on mobile */
+    }
+    
+    .navbar {
+        text-align: center; /* Center navbar items on mobile */
+    }
+}
