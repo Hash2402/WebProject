@@ -1,26 +1,102 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html, body {
-    height: 100%; /* Ensure the body takes the full height */
-    margin: 0; /* Remove default margin */
-}
-/* Body and Background */
+
 body {
-    
-    min-height: 100vh;
-    font-family: 'Arial', sans-serif; /* Set a default font */
-    color: #333; /* Dark text color */
+    background-image: url('assets/bg.jpeg'); /* Background image */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
 }
 
-/* Navbar Styles */
-.navbar {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-    border-bottom: 1px solid #ccc; /* Light grey border */
+/* Ensure the main content takes available space */
+main {
+    flex: 1; /* Allow main to grow and take available space */
+    background-color: #e0f7f7;
+    
 }
+
+/* Hero section styles */
+header {
+    background: linear-gradient(to bottom, #2F4F4F, #4F8C8C);
+
+
+    text-align: center; /* Center text in header */
+    padding: 20px; /* Add some padding */
+    
+    color: white; /* Text color for the hero section */
+}
+.hero-section {
+    text-align: center; /* Center the text */
+    padding: 5rem; /* Ensure there's enough padding for a balanced layout */
+}
+
+h1 {
+    font-size: 3rem; /* Increase font size for prominence */
+    margin-bottom: 1.5rem; /* More space below the header for better separation */
+    color: #FFFAFA; /* Match the updated header text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better contrast */
+}
+
+p {
+    font-size: 1.5rem; /* Slightly larger paragraph font size for readability */
+    
+    color: #B0E0E6; /* Match the updated paragraph color */
+    
+}
+
+.btn-teal {
+    background-color: #008C74; /* Teal */
+    color: #FFFFFF; /* White text */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 0.75rem 1.5rem; /* Padding */
+}
+
+.btn-teal:hover {
+    background-color: #007B63; /* Darker teal */
+    color: #FFFFFF; /* White text */
+}
+
+
+
+
+
+
+.navbar {
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.nav-link {
+    color: #FFD700; /* Default text color */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+}
+
+.nav-link:hover {
+    color: #FFEA00; /* Change text color on hover */
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700; /* Glow effect */
+}
+
+
+/* Brand name styling */
+.navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    color: #FFD700; /* Gold color for the text */
+  
+    letter-spacing: 1px; /* Add space between letters */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+}
+
+.navbar-brand:hover {
+    color: #FFEA00; /* Change color on hover */
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFEA00; /* Glow effect on hover */
+}
+
 
 /* Custom styles for navbar toggler */
 .navbar-toggler {
@@ -48,22 +124,54 @@ body {
 
 
 
-/* Header Section */
-.header {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    color: white; /* White text for contrast */
+
+/* Core Services Section Styles */
+#core-services {
+    margin: 20px auto; /* Center the section with automatic left and right margins */
+    padding: 20px; /* Add padding inside the section */
+    background-color:#e7f3fe; /* Semi-transparent white for background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.header h1 {
-    font-size: 2.5rem;
-    color:cyan;
+/* Equal height for cards */
+.card {
+    height: 100%; /* Ensure all cards are of equal height */
 }
 
-.header p {
-    font-size: 1.2rem;
+/* Margin for card images and body */
+.card-img-top {
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensures the image covers the area without distorting */
+    border-top-left-radius: 10px; /* Rounded corners for the top of the card */
+    border-top-right-radius: 10px; /* Rounded corners for the top of the card */
+    margin-bottom: 10px; /* Space below the image */
 }
+
+.card-body {
+    margin-top: 10px; /* Space above the card body content */
+}
+
+
+
+#core-services h2 {
+    color: #2F4F4F; /* Dark Slate Gray for contrast */
+}
+
+#core-services .card {
+    margin-bottom: 20px; /* Add spacing between cards */
+    border: 1px solid #ccc; /* Optional: Add a border to cards */
+    border-radius: 8px; /* Optional: Add rounded corners to cards */
+}
+
+#core-services .card-title {
+    color: #2F4F4F; /* Dark Slate Gray for title */
+}
+
+#core-services .card-text {
+    color: #333; /* Darker text for better readability */
+}
+
 
 /* Main Content */
 .container {
@@ -94,18 +202,17 @@ body {
     margin-left: 20px; /* Space between text and floating element */
 }
 
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    position:relative ;
+/* Footer styles */
+#footer_id {
+   
+    background-color: #2F4F4F; /* Dark Slate Gray for the footer background */
+    color: #FFD700; /* Gold color for the footer text */
+    padding: 1rem; /* Add some padding */
+    position: relative; /* Position it relative */
+    bottom: 0; /* Align it to the bottom */
+    width: 100%; /* Ensure it takes the full width */
+    text-align: center; /* Center the text */
 }
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .header h1 {
