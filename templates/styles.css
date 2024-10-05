@@ -1,9 +1,6 @@
 
 body {
-    background-image: url('assets/bg.jpeg'); /* Background image */
-    background-size: cover; /* Cover the entire body */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-color: #e0f7f7;
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     min-height: 100vh; /* Ensure body takes at least full viewport height */
@@ -71,6 +68,8 @@ p {
 }
 
 .nav-link {
+    
+    font-size: 1.3rem;
     color: #FFD700; /* Default text color */
     transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
 }
@@ -84,7 +83,7 @@ p {
 /* Brand name styling */
 .navbar-brand {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.8rem; /* Increase font size */
+    font-size: 2.0rem; /* Increase font size */
     font-weight: bold; /* Make the text bold */
     color: #FFD700; /* Gold color for the text */
   
@@ -120,6 +119,21 @@ p {
     outline: none;
     box-shadow: 0 0 3px 3px rgba(255, 215, 0, 0.5); /* Soft gold shadow */
 }
+
+.brand_name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.0rem; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    color: #FFD700; /* Gold color for the text */
+  
+    letter-spacing: 1px; /* Add space between letters */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+}
+.brand_name:hover {
+    color: #FFEA00; /* Change color on hover */
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFEA00; /* Glow effect on hover */
+}
+
 
 
 
@@ -183,18 +197,196 @@ p {
 
 /* About Section */
 .about {
-    background-color: #f9f9f9; /* Light grey background */
+    background-color: #e7f3fe;
     padding: 30px;
     border-radius: 10px;
     margin: 20px 0;
 }
-
-/* Contact Section */
-.contact {
-    background-color: #e8f0fe; /* Light blue background */
-    padding: 30px;
-    border-radius: 10px;
+.about-page h3{
+    color:#16A085 ;
+    text-align: center;
+    margin-bottom: 10px;
 }
+
+.about-page ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.about-page ul li {
+    margin: 10px 0; /* Space between list items */
+    padding: 10px; /* Padding inside list items */
+    background-color: #e8f4f4; /* Default background for odd list items */
+    border-radius: 5px; /* Rounded corners for list items */
+}
+
+.about-page ul li:nth-child(odd) {
+    background-color: #f0f8ff; /* Light background for odd items */
+}
+
+.about-page ul li:nth-child(even) {
+    background-color: #d1e7dd; /* Slightly darker background for even items */
+}
+
+.about-page ul li strong {
+    font-size: 1.2rem; /* Increase the font size of <strong> */
+    color:cornflowerblue; /* A deeper slate color for emphasis */
+}
+
+.about-page p {
+    font-size: 1.15rem; /* Set the font size */
+    color:#2C3539 ; /* Change the text color to a darker shade */
+}
+.about-page-team .team-member h5{
+    color:tan;
+    font-family: 'Roboto', sans-serif;
+}
+.about-page-team .team-member p{
+    color:royalblue;
+    font-family: 'Roboto', sans-serif;
+}
+.about-page-team .team-member img {
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    width: 100%; /* Set to 100% to maintain responsiveness */
+    height: 250px; /* Set a specific height for all images */
+    object-fit: cover; /* Ensures images cover the specified dimensions without distortion */
+}
+
+.about-page-team .team-member img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+/* Contact Page Styles */
+.contact-page {
+    padding: 40px; /* Increased padding for a more spacious feel */
+    background-color: #f0f4f8; /* Light background color for a clean look */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px auto; /* Center margin */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 600px; /* Set a max width for better alignment */
+    text-align: center; /* Center align text */
+}
+
+.contact-page h2 {
+    color: #1E3A8A; /* Deep blue color for headings */
+    font-size: 2rem; /* Increased font size for better visibility */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+.contact-page p {
+    color: #374151; /* Darker gray for text for better contrast */
+    font-size: 1.1rem; /* Slightly larger text for readability */
+}
+
+/* Style for the form labels */
+#contactForm .form-label {
+    font-size: 1.1rem; /* Adjust font size */
+    color: #2F4F4F; /* Use the navbar color or choose another color */
+    font-weight: bold; /* Make the labels bold */
+    margin-bottom: 5px; /* Space below the labels */
+}
+
+/* Style for the form control inputs */
+#contactForm .form-control {
+    border: 1px solid #2F4F4F; /* Border color */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 10px; /* Padding inside the input */
+    transition: border-color 0.3s ease; /* Smooth transition for border color on focus */
+}
+
+/* Change border color on focus */
+#contactForm .form-control:focus {
+    border-color: #FFD700; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Style for the message textarea */
+#contactForm textarea {
+    resize: none; /* Disable resizing for the textarea */
+}
+
+/* Style for the submit button */
+.contact-form-button {
+    background-color: #FFD700; /* Button background color */
+    color: #2F4F4F; /* Text color */
+    font-size: 1rem; /* Button font size */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+.contact-form-button:hover {
+    background-color: #FFC107; /* Change background color on hover */
+    transform: scale(1.05); /* Scale the button slightly on hover */
+}
+
+/* Style for the form status message */
+#formStatus {
+    margin-top: 15px; /* Space above the status message */
+    font-size: 1rem; /* Font size for the status message */
+    color: #FF4500; /* Color for status message (e.g., for errors) */
+    text-align: center; /* Center align the status message */
+}
+
+
+.contact-page .contact-info {
+    margin-top: 30px; /* Margin for spacing */
+    background-color: #e7f3fe; /* Light background for contact info section */
+    padding: 20px; /* Padding for inner spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.contact-page .contact-info h4 {
+    color: #00BFFF; /* Customize color for the contact information heading */
+    margin-bottom: 10px; /* Spacing below the heading */
+}
+
+.contact-page .contact-info p {
+    color: #374151; /* Darker gray for contact information text */
+    margin: 5px 0; /* Margin for spacing between items */
+    text-align: left;
+}
+
+
+.get-in-touch-div {
+    background-color: #2F4F4F; /* Same color as the navbar */
+    padding: 20px; /* Add some padding for spacing */
+    border-radius: 8px; /* Optional: rounded corners */
+    margin-bottom: 20px; /* Spacing below the div */
+}
+
+.get-in-touch-div h2 {
+    color: #FFD700; /* Text color for the heading, adjust as needed */
+    margin: 0; /* Remove default margin */
+}
+
+.contact-info .contact-link {
+    color: #3CB371; /* Change to your preferred color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.contact-info .contact-link:hover {
+    color: #FF8C42; /* Change to a different color on hover */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+.contact-page_text-center {
+    color: #2F4F4F; /* A dark color for good readability */
+    font-size: 1.25rem; /* Increase font size for better visibility */
+    font-weight: 500; /* Medium font weight */
+    line-height: 1.5; /* Better line spacing for readability */
+    margin: 20px 0; /* Add some space above and below */
+    padding: 15px; /* Add some padding */
+    background-color: #e7f3fe; /* Light background color to make it pop */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
 
 /* Floating Element */
 .float-right {
@@ -212,9 +404,31 @@ p {
     bottom: 0; /* Align it to the bottom */
     width: 100%; /* Ensure it takes the full width */
     text-align: center; /* Center the text */
+} 
+#footer_id p {
+    
+    color: #FFD700; 
+    
 }
-/* Responsive Design */
+
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
+    .contact-page {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    .contact-page h2 {
+        font-size: 1.5rem; /* Smaller font size for headings */
+    }
+
+    .contact-page p {
+        font-size: 1rem; /* Smaller font size for paragraphs */
+    }
+
+    .contact-page .btn-primary {
+        width: 100%; /* Full-width button on small screens */
+    }
     .header h1 {
         font-size: 2rem; /* Smaller header on mobile */
     }
