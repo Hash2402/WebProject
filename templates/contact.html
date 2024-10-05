@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <!-- Navigation -->
@@ -32,10 +34,12 @@
         </div>
     </nav>
 
-
-    <section class="container mt-5">
-        <h2 class="text-center">Get in Touch</h2>
-        <p class="text-center">We would love to hear from you! Whether you're looking for a custom solution or have general inquiries, reach out to us below.</p>
+    <section class="container mt-5 contact-page">
+        <div class="get-in-touch-div">
+            <h2 class="text-center">Get in Touch</h2>
+        </div>
+        
+        <p class="contact-page_text-center">We would love to hear from you!<br> Whether you're looking for a custom solution or have general inquiries, reach out to us below.</p>
         
         <!-- Contact Form -->
         <form id="contactForm">
@@ -51,18 +55,26 @@
                 <label for="message" class="form-label">Message</label>
                 <textarea class="form-control" id="message" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn contact-form-button">Submit</button>
         </form>
-
+    
+        <!-- Contact Information -->
+        <div class="contact-info mt-4 text-center">
+            <h4>Contact Information</h4>
+            <p><strong>Email:</strong> <a class="contact-link" href="mailto:contact@visionaryml.com">contact@visionaryml.com</a></p>
+            <p><strong>Phone:</strong> <a class="contact-link" href="tel:+15551234567">+1 (555) 123-4567</a></p>
+            <p><strong>Address:</strong> 123 AI Avenue, Tech City, CA 94016</p>
+        </div>
+        
+    
         <!-- Status message -->
         <p id="formStatus"></p>
     </section>
 
     <!-- Footer -->
-    <footer id="footer_id">
-        <p style="color: #FFD700;font-size: 1.25rem;">&copy; 2024 VisionaryML. All rights reserved.</p>
+    <footer id="footer_id" class="text-center p-3">
+        <p style="color: #FFD700; font-size: 1.25rem;">&copy; 2024 VisionaryML. All rights reserved.</p>
     </footer>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/static/main.js"></script>
