@@ -1,25 +1,16 @@
 from flask import Flask, render_template, request, jsonify
-import boto3  # AWS SDK for Python (for DynamoDB or other AWS services)
-import os
+import boto3
+from config import Config  
 
 app = Flask(__name__)
 
-# Example configuration for AWS credentials
-# Make sure to configure your AWS credentials using environment variables or AWS config file
-AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY')
-AWS_SECRET_KEY = os.getenv('AWS_SECRET_KEY')
-AWS_REGION = 'us-west-1'  # Change based on your AWS region
-
-# Setup for AWS DynamoDB (if using DynamoDB)
+# Setup for AWS DynamoDB using the config
 dynamodb = boto3.resource(
     'dynamodb',
-    region_name=AWS_REGION,
-    aws_access_key_id=AWS_ACCESS_KEY,
-    aws_secret_access_key=AWS_SECRET_KEY
+    region_name=Config.AWS_REGION,
+    aws_access_key_id=Config.AWS_ACCESS_KEY,
+    aws_secret_access_key=Config.AWS_SECRET_KEY
 )
-
-# Your table name in DynamoDB (if using it)
-TABLE_NAME = 'visionaryml_contact_data'
 
 # Define the homepage route
 @app.route('/')
@@ -48,9 +39,9 @@ def submit_form():
     if not name or not email or not message:
         return jsonify({'status': 'error', 'message': 'Invalid data'}), 400
 
-    # Store the data in AWS DynamoDB (or another database)
+    # Store the data in AWS DynamoDB
     try:
-        table = dynamodb.Table(TABLE_NAME)
+        table = dynamodb.Table(Config.TABLE_NAME)
         table.put_item(
             Item={
                 'name': name,

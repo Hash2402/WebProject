@@ -4,6 +4,17 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
+    
+    if (!name || !email || !message) {
+        document.getElementById('formStatus').textContent = 'Please fill in all fields.';
+        return;
+    }
+
+    const submitButton = document.querySelector('.contact-form-button');
+    submitButton.disabled = true; // Disable the button
+    const statusMessage = document.getElementById('formStatus');
+    statusMessage.textContent = 'Submitting...'; // Indicate loading
+
     // Sending POST request to the Flask backend
     fetch('/submit-form', {
         method: 'POST',
@@ -14,10 +25,15 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('formStatus').textContent = 'Thank you! We will get back to you shortly.';
+        statusMessage.textContent = 'Thank you! We will get back to you shortly.';
+        statusMessage.style.color = '#28a745'; // Green for success
         document.getElementById('contactForm').reset();
     })
     .catch(error => {
-        document.getElementById('formStatus').textContent = 'There was an error submitting your form.';
+        statusMessage.textContent = 'There was an error submitting your form.';
+        statusMessage.style.color = '#dc3545'; // Red for error
+    })
+    .finally(() => {
+        submitButton.disabled = false; // Re-enable the button
     });
 });
