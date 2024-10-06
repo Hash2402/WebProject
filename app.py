@@ -31,15 +31,18 @@ def contact():
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
     data = request.get_json()
+    
+
     name = data.get('name')
     email = data.get('email')
     message = data.get('message')
 
     # Ensure data is valid
     if not name or not email or not message:
+        
         return jsonify({'status': 'error', 'message': 'Invalid data'}), 400
 
-    # Store the data in AWS DynamoDB
+    # Store the data in AWS DynamoDB (or another database)
     try:
         table = dynamodb.Table(Config.TABLE_NAME)
         table.put_item(
@@ -52,7 +55,7 @@ def submit_form():
         return jsonify({'status': 'success'}), 200
 
     except Exception as e:
-        print(f"Error storing data: {e}")
+        print(f"Error storing data: {e}")  # Log the error
         return jsonify({'status': 'error', 'message': 'Server error'}), 500
 
 if __name__ == '__main__':
